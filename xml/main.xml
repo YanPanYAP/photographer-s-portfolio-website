@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<contactForm>
+    <input name="firstName" type="text" required="true" placeholder="first name"/>
+    <label for="firstName">First Name</label>
+
+    <input name="lastName" type="text" required="true" placeholder="last name"/>
+    <label for="lastName">Last Name</label>
+
+    <input name="email" type="email" required="true" placeholder="email address"/>
+    <label for="email">Email</label>
+
+    <input name="phoneNumber" type="number" required="true" placeholder="phone number"/>
+    <label for="phoneNumber">Phone Number</label>
+
+    <textarea name="message" rows="1" required="true" placeholder="message"/>
+    <label for="message">Your Message</label>
+</contactForm>

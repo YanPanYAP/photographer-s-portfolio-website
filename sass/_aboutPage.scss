@@ -1,0 +1,290 @@
+.about-first-section {
+    height: 700px;
+    position: relative;
+    background-image: url("../images/about-image.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+
+    .pre-about {
+        border: none;
+        padding-top: 55px;
+        margin-bottom: 0;
+        padding-bottom: 14px;
+    }
+
+    .popularity-items {
+        display: flex;
+        justify-content: space-between;
+
+        .popularity-item {
+            background-color: #0E0E10;
+            border: 1px solid #1C1C21;
+            padding: 25px 30px;
+            border-radius: 20px;
+
+            .popularity-number {
+                font-size: 33px;
+            }
+
+            .popularity-name {
+                font-family: 'Manrope-Regular';
+                color: #797C86;
+            }
+        }
+    }
+
+    .about-decoration {
+        display: flex;
+        justify-content: space-between;
+        color: #797C86;
+        text-transform: uppercase;
+        margin-top: 257px;
+    }
+}
+
+.bigStar {
+    width: 100px;
+    margin-left: 20px;
+}
+
+.scroll-text {
+    width: 210px;
+    padding-top: 23px;
+}
+
+.biography-container {
+    margin-top: 40px;
+    margin-bottom: 150px;
+    padding: 70px 0;
+    border-bottom: 1px solid #1C1C21;
+    border-top: 1px solid #1C1C21;
+
+    .biography-name {
+        padding-bottom: 40px;
+        font-size: 40px;
+        text-transform: uppercase;
+        color: #797C86;
+    }
+
+    .biography-text {
+        color: #797C86;
+        font-family: 'Manrope-Regular';
+    }
+}
+
+.journey-container {
+    margin-bottom: 150px;
+}
+
+.card-items {
+    display: grid;
+    grid-template-columns: repeat(2, 585px);
+    gap: 30px;
+
+    .card-item {
+        background-image: url("../images/card-item-image.png");
+        background-color: #0E0E10;
+        border: 1px solid #1C1C21;
+        background-position-x: -100px;
+        background-repeat: no-repeat;
+        padding: 50px;
+        border-radius: 20px;
+
+        .card-name {
+            color: #797C86;
+            text-transform: uppercase;
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .card-text {
+            color: #797C86;
+            font-family: 'Manrope-Regular';
+        }
+    }
+}
+
+@media screen and (max-width: 1299px) {
+    .about-first-section {
+        height: 700px;
+        background-image: url("../images/about-image2.png");
+
+        .popularity-items {
+    
+            .popularity-item {
+                padding: 12px 22px;
+    
+                .popularity-number {
+                    font-size: 30px;
+                }
+            }
+        }
+    
+        .about-decoration {
+            margin-top: 306px;
+        }
+    }
+    
+    .bigStar {
+        margin-left: 0px;
+    }
+    
+    .scroll-text {
+        padding-top: 30px;
+        width: 146px;
+    }
+    
+    
+    .card-items {
+        display: grid;
+        grid-template-columns: repeat(2, 465px);
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .about-first-section {
+        height: 545px;
+        background-image: url("../images/about-image2.png");
+    
+        .pre-about {
+            padding-bottom: 1px;
+        }
+
+        .popularity-items {
+    
+            .popularity-item {
+                padding: 15px 16px;
+    
+                .popularity-number {
+                    font-size: 20px;
+                }
+            }
+        }
+    
+        .about-decoration {
+            margin-top: 226px;
+        }
+    }
+    
+    .bigStar {
+        margin-left: 0px;
+        width: 70px;
+    }
+    
+    .scroll-text {
+        padding-top: 20px;
+        width: 107px;
+    }
+    
+    .biography-container {
+        margin-top: 0px;
+        margin-bottom: 100px;
+        padding: 40px 0;
+    }
+    
+    .card-items {
+        display: grid;
+        grid-template-columns: repeat(2, 345px);
+        gap: 10px;
+
+        .card-item {
+            padding: 20px;
+            border-radius: 10px;
+    
+            .card-name {
+                color: #797C86;
+                text-transform: uppercase;
+                font-size: 25px;
+                margin-bottom: 10px;
+            }
+    
+            .card-text {
+                color: #797C86;
+                font-family: 'Manrope-Regular';
+            }
+        }
+    }
+}
+@media screen and (max-width: 767px) {
+    .about-first-section {
+        height: 235px;
+        background-image: url("../images/about-image3.png");
+    
+        .pre-about {
+            border: none;
+            padding-top: 235px;
+            margin-bottom: 0;
+            padding-bottom: 14px;
+        }
+    
+        .popularity-items {
+            display: grid;
+            grid-template-columns: repeat(2, 150px);
+            gap: 10px;
+    
+            .popularity-item {
+                background-color: #0E0E10;
+                border: 1px solid #1C1C21;
+                padding: 15px 20px;
+                border-radius: 10px;
+    
+                .popularity-number {
+                    font-size: 33px;
+                }
+    
+                .popularity-name {
+                    font-family: 'Manrope-Regular';
+                    color: #797C86;
+                }
+            }
+        }
+    
+        .about-decoration {
+            display: flex;
+            justify-content: space-between;
+            color: #797C86;
+            text-transform: uppercase;
+            margin-top: 257px;
+        }
+    }
+    
+    .bigStar {
+        visibility: hidden;
+    }
+    
+    .scroll-text {
+        visibility: hidden;
+    }
+    
+    .biography-container {
+        margin-top: 405px;
+        margin-bottom: 90px;
+        padding: 30px 0;
+    
+        .biography-name {
+            padding-bottom: 10px;
+            font-size: 25px;
+        }
+    }
+    
+    .journey-container {
+        margin-bottom: 100px;
+    }
+    
+    .card-items {
+        display: block;
+    
+        .card-item {
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+    
+            .card-name {
+                font-size: 25px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}

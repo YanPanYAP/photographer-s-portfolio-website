@@ -1,0 +1,114 @@
+.portfolio-about-content{
+    margin-bottom: 100px;
+}
+
+.portfolio-about-items {
+    display: grid;
+    grid-template-columns: repeat(3, 350px);
+    gap: 60px;
+
+    .portfolio-about-item {
+        img {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    }
+
+    .porfolio-about-text-box {
+        display: flex;
+        justify-content: space-between;
+
+        .porfolio-about-name {
+            font-family: 'Manrope-Medium';
+            font-size: 20px;
+            color: #CACACE;
+        }
+    
+        .porfolio-about-about {
+            font-family: 'Manrope-Regular';
+            color: #797C86;
+        }
+
+        .porfolio-about-link {
+            display: flex;
+            border-bottom: 1px solid #1C1C21;
+
+            a {
+                font-size: 20px;
+                text-transform: uppercase;
+                margin-right: 5px;
+            }
+
+            .porfolio-about-link-image {
+                width: 22px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1299px) {
+    .portfolio-about-items {
+        grid-template-columns: repeat(3, 296px);
+        gap: 30px;
+
+        .portfolio-about-item {
+            img {
+                margin-bottom: 10px;
+            }
+        }
+    
+        .porfolio-about-text-box {
+            .porfolio-about-name {
+                font-size: 18px;
+            }
+
+            .porfolio-about-link {
+                a {
+                    font-size: 18px;
+                }
+    
+                .porfolio-about-link-image {
+                    width: 22px;
+                }
+            }
+        }
+    }
+    
+}
+
+@media screen and (max-width: 1023px) {
+    .portfolio-about-items {
+        grid-template-columns: repeat(3, 220px);
+        gap: 20px;
+    
+        .porfolio-about-text-box {
+            .porfolio-about-name {
+                font-size: 13px;
+            }
+
+            .porfolio-about-link {
+                a {
+                    font-size: 13px;
+                }
+    
+                .porfolio-about-link-image {
+                    width: 17px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .portfolio-about-items {
+        display: block;
+
+        .portfolio-about-item {
+            margin-bottom: 40px;
+            img {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}

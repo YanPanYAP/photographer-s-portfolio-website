@@ -1,0 +1,319 @@
+.first-info {
+    display: flex;
+    justify-content: space-between;
+    height: 238px;
+    text-transform: uppercase;
+    background-image: url("../images/Abstract-design.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 250px;
+
+    .photographer-first-info {
+        margin: auto 0;
+
+        .photographer-name {
+            font-size: 60px;
+        }
+    }
+}
+
+.main-image-container {
+    height: 384px;
+    background-image: url("../images/main-images.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 120%;
+    margin-bottom: 120px;
+}
+
+.home-about-content {
+    margin-bottom: 150px;
+}
+
+.home-about {
+    display: flex;
+    justify-content: space-between;
+
+    .home-about-image img {
+        width: 600px;
+    }
+
+    .home-about-container {
+        border: 1px solid #1C1C21;
+        border-radius: 20px;
+        height: fit-content;
+        margin: auto 0;
+        margin-left: 30px;
+
+        .home-about-information {
+            padding: 40px;
+            border-bottom: 1px solid #1C1C21;
+        }
+
+        .about-text {
+            display: flex;
+            margin-bottom: 20px;
+        
+            p {
+                font-family: 'Manrope-Regular';
+                font-size: 24px;
+                color: #CACACE;
+                margin-left: 10px;
+            }
+        }
+        
+        .introduction-text {
+            font-family: 'Manrope-Regular';
+            color: #AFB0B6;
+        }
+
+        .home-contact-information {
+            padding: 40px;
+        }
+
+        .home-contacts{
+            display: grid;
+            grid-template-columns: repeat(2, 50%);
+            gap: 10px;
+            margin-bottom: 40px;
+
+            .info-text {
+                font-family: 'Manrope-Medium';
+            }
+
+            p:nth-child(even) {
+                padding-left: 30px;
+            }
+
+            .contact-info-text {
+                font-family: 'Manrope-Regular';
+                color: #AFB0B6;
+            }
+        }
+
+        .home-contact-buttons {
+            display: flex;
+            justify-content: space-between;
+
+            .contact-buttons {
+                :nth-child(1) {
+                    margin-right: 10px;
+                }
+                button {
+                    width: 160px;
+                    height: 53px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1299px) {
+    .first-info {
+        .photographer-first-info {
+            .photographer-name {
+                font-size: 50px;
+            }
+        }
+    }
+
+    .main-image-container {
+        height: 322px;
+    }
+    
+    .home-about {
+        .home-about-image img {
+            width: 470px;
+        }
+    
+        .home-about-container {
+            .home-about-information {
+                padding: 30px;
+            }
+    
+            .about-text {
+                margin-bottom: 20px;
+
+                .star {
+                    width: 25px;
+                }
+            
+                p {
+                    font-size: 20px;
+                }
+            }
+    
+            .home-contact-information {
+                padding: 30px;
+            }
+    
+            .home-contacts{
+                margin-bottom: 30px;
+            }
+    
+            .home-contact-buttons {
+                .contact-buttons {
+                    button {
+                        width: 110px;
+                        height: 45px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .first-info {
+        height: 133px;
+        background-size: 140px;
+    
+        .photographer-first-info {
+            .photographer-name {
+                font-size: 37px;
+            }
+        }
+    }
+
+    .main-image-container {
+        height: 224px;
+        margin-bottom: 80px;
+    }
+    
+    .home-about-content {
+        margin-bottom: 80px;
+    }
+
+    .home-about {
+        .home-about-image img {
+            width: 340px;
+        }
+    
+        .home-about-container {
+            margin-left: 15px;
+
+            .home-about-information {
+                padding: 15px;
+            }
+    
+            .about-text {
+                margin-bottom: 15px;
+
+                .star {
+                    width: 20px;
+                }
+            
+                p {
+                    font-size: 15px;
+                }
+            }
+    
+            .home-contact-information {
+                padding: 15px;
+            }
+    
+            .home-contacts{
+                margin-bottom: 15px;
+            }
+    
+            .home-contact-buttons {
+                .contact-buttons {
+                    button {
+                        width: 90px;
+                        height: 35px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .first-info {
+        display: block;
+        height: auto;
+        background-image: none;
+    
+        .photographer-first-info {
+            padding: 20px 0px;
+    
+            .photographer-name {
+                font-size: 30px;
+            }
+        }
+    }
+    
+    .main-image-container {
+        height: 260px;
+        background-image: url("../images/mobile-main-images.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100%;
+        margin-bottom: 40px;
+    }
+    
+    .home-about-content {
+        margin-bottom: 80px;
+    }
+    
+    .home-about {
+        display: block;
+    
+        .home-about-image img {
+            width: 100%;
+        }
+    
+        .home-about-container {
+            width: 100%;
+            border-radius: 20px;
+            height: fit-content;
+            margin-left: 0;
+            margin-top: 10px;
+    
+            .home-about-information {
+                padding: 15px;
+            }
+    
+            .about-text {
+                display: flex;
+                margin-bottom: 15px;
+            
+                p {
+                    font-size: 20px;
+                    margin-left: 10px;
+                }
+            }
+            
+            .home-contact-information {
+                padding: 10px;
+            }
+    
+            .home-contacts{
+                display: grid;
+                gap: 10px;
+                margin-bottom: 20px;
+                font-size: 12px;
+    
+                p:nth-child(even) {
+                    padding-left: 15px;
+                }
+            }
+    
+            .home-contact-buttons {
+                display: block;
+    
+                .contact-buttons {
+                    :nth-child(1) {
+                        margin-right: 10px;
+                    }
+                    button {
+                        width: 100%;
+                        font-size: 12px;
+                        height: 50px;
+                        margin-top: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

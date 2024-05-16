@@ -32,47 +32,34 @@ let form = document.getElementById('contactForm');
 let button = document.getElementById('form-button');
 button.addEventListener('click', () => form.reset());
 
-function generateXML() {
-  const firstName = document.getElementById('firstName').value;
-  const lastName = document.getElementById('lastName').value;
-  const email = document.getElementById('email').value;
-  const phoneNumber = document.getElementById('phoneNumber').value;
-  const message = document.getElementById('message').value;
+document.addEventListener("DOMContentLoaded", function() {
+  fetch('../xml/main.xml')
+      .then(response => response.text())
+      .then(data => {
+          const parser = new DOMParser();
+          const xmlDoc = parser.parseFromString(data, "application/xml");
+          const form = document.getElementById('contactForm');
+          const formElements = xmlDoc.getElementsByTagName('contactForm')[0].children;
 
-  const xmlDoc = document.implementation.createDocument('', '', null);
-  const contactForm = xmlDoc.createElement('ContactForm');
-
-  const firstNameElement = xmlDoc.createElement('FirstName');
-  firstNameElement.textContent = firstName;
-  contactForm.appendChild(firstNameElement);
-
-  const lastNameElement = xmlDoc.createElement('LastName');
-  lastNameElement.textContent = lastName;
-  contactForm.appendChild(lastNameElement);
-
-  const emailElement = xmlDoc.createElement('Email');
-  emailElement.textContent = email;
-  contactForm.appendChild(emailElement);
-
-  const phoneNumberElement = xmlDoc.createElement('PhoneNumber');
-  phoneNumberElement.textContent = phoneNumber;
-  contactForm.appendChild(phoneNumberElement);
-
-  const messageElement = xmlDoc.createElement('Message');
-  messageElement.textContent = message;
-  contactForm.appendChild(messageElement);
-
-  xmlDoc.appendChild(contactForm);
-
-  const serializer = new XMLSerializer();
-  const xmlString = serializer.serializeToString(xmlDoc);
-
-  const blob = new Blob([xmlString], { type: 'application/xml' });
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement('a');
-  a.href = url;
-  a.download = 'contactForm.xml';
-  document.body.appendChild(a);
-  a.click();
-  document.body.removeChild(a);
-}
+          for (let element of formElements) {
+              if (element.tagName.toLowerCase() === 'input' || element.tagName.toLowerCase() === 'textarea') {
+                  const div = document.createElement('div');
+                  div.classList.add('form-group');
+                  const label = xmlDoc.querySelector(`label[for="${element.getAttribute('name')}"]`);
+                  if (label) {
+                      const labelElement = document.createElement('label');
+                      labelElement.setAttribute('for', element.getAttribute('name'));
+                      labelElement.textContent = label.textContent;
+                      div.appendChild(labelElement);
+                  }
+                  const inputElement = document.createElement(element.tagName.toLowerCase());
+                  for (let attr of element.attributes) {
+                      inputElement.setAttribute(attr.name, attr.value);
+                  }
+                  div.appendChild(inputElement);
+                  form.appendChild(div);
+              }
+          }
+      })
+      .catch(error => console.error('Error loading XML:', error));
+});
